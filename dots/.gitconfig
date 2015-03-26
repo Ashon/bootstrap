@@ -1,0 +1,14 @@
+[user]
+	email = ashon8813@gmail.com
+	name = ashon
+[push]
+	default = matching
+[alias]
+	st = status
+	br = branch
+	ci = commit
+	co = checkout
+	stsh = stash
+	unstage = reset HEAD --
+	ps = push
+	pl = pull
