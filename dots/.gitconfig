@@ -9,9 +9,11 @@
 	ci = commit
 	co = checkout
 	stsh = stash
-	unstage = reset HEAD --
+	us = reset HEAD
 	mm = merge --no-ff
 	df = diff
+	rb = rebase
+	ch = checkout
 	ps = push
 	pl = pull
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
