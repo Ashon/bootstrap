@@ -55,7 +55,18 @@ if [ -n "$force_color_prompt" ]; then
 	color_prompt=
     fi
 fi
-IPADDR=$(ifconfig eth0 | grep 'inet addr' | awk '{print $2}' | cut -d : -f 2)
+function get_ip_addr {
+    local nic=$1
+    echo $(ifconfig $NIC | grep 'inet addr' | awk '{print $2}' | cut -d : -f 2)
+}
+
+NIC=wlan0
+IPADDR=$(get_ip_addr wlan0)
+if [ "$IPADDR" == "" ]; then
+    NIC=eth0
+    IPADDR=$(get_ip_addr eth0)
+fi
+
 # simple git shell
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
@@ -65,12 +76,14 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+SHELL_USERNAME='\[\033[01;32m\]\u'
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\][\[\033[00;31m\]$IPADDR\[\033[00m\]]: \[\033[00;33m\]\w \[\033[00m\]$(__git_ps1 "[\[\e[0;32m\]%s\[\e[0m\]\[\e[1;33m\]$(parse_git_dirty)\[\e[0m\]]")\n[\D{%F %T}] $ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
- 
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -127,5 +140,8 @@ if ! shopt -oq posix; then
 fi
 
 # import bash git prompt
-GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_ONLY_IN_REPO=0
+GIT_PROMPT_THEME=Default
+GIT_PROMPT_LEADING_SPACE=0
+
 source ~/.bash-git-prompt/gitprompt.sh
