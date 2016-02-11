@@ -141,7 +141,7 @@ fi
 
 # import bash git prompt
 GIT_PROMPT_ONLY_IN_REPO=0
-GIT_PROMPT_THEME=Default
+GIT_PROMPT_THEME=Jwl
 GIT_PROMPT_LEADING_SPACE=0
 
 source ~/.bash-git-prompt/gitprompt.sh

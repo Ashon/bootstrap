@@ -1,0 +1,30 @@
+# This is the default theme for gitprompt.sh
+override_git_prompt_colors() {
+  GIT_PROMPT_THEME_NAME="Jwl"
+
+  GIT_PROMPT_PREFIX=""
+  GIT_PROMPT_SUFFIX=" "
+  GIT_PROMPT_SEPARATOR=""
+  GIT_PROMPT_BRANCH="${Magenta}"
+  GIT_PROMPT_STAGED="${Red} staged:"
+  GIT_PROMPT_CONFLICTS="${Red} conflicts:"
+  GIT_PROMPT_CHANGED="${Blue} changed:"
+  GIT_PROMPT_REMOTE=" "
+  GIT_PROMPT_UNTRACKED="${Cyan} untracked:"
+  GIT_PROMPT_STASHED="${BoldBlue} stashed:"
+  GIT_PROMPT_CLEAN="${BoldGreen} clean"
+
+  GIT_PROMPT_COMMAND_OK="${Green}[OK _LAST_COMMAND_STATE_]"
+  GIT_PROMPT_COMMAND_FAIL="${Red}[FAIL _LAST_COMMAND_STATE_]"
+  GIT_PROMPT_VIRTUALENV="(${Blue}_VIRTUALENV_${ResetColor}) "
+  GIT_PROMPT_START_USER="[${Cyan}\u@\h ${BoldBlue}($NIC)$IPADDR${ResetColor}] ${Yellow}${PathShort} _LAST_COMMAND_INDICATOR_${ResetColor}\n["
+  GIT_PROMPT_START_ROOT="${GIT_PROMPT_START_USER}"
+  GIT_PROMPT_END_USER="\D{%F %T}] $ "
+  GIT_PROMPT_END_ROOT="\D{%F %T}] # "
+  GIT_PROMPT_SYMBOLS_AHEAD="ahead:"
+  GIT_PROMPT_SYMBOLS_BEHIND="behind:"
+  GIT_PROMPT_SYMBOLS_PREHASH=":"
+  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="L"
+}
+
+reload_git_prompt_colors "Jwl"
