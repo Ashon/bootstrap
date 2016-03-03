@@ -24,10 +24,10 @@ override_git_prompt_colors() {
 
   GIT_PROMPT_START_ROOT="${GIT_PROMPT_START_USER}"
   GIT_PROMPT_END_ROOT="${ResetColor}\n>[\D{%F %T}] # "
-  GIT_PROMPT_SYMBOLS_AHEAD="ahead:"
-  GIT_PROMPT_SYMBOLS_BEHIND="behind:"
+  GIT_PROMPT_SYMBOLS_AHEAD=" ${BrightBlack}⇑${ResetColor}"
+  GIT_PROMPT_SYMBOLS_BEHIND=" ${BrightBlack}⇓${ResetColor}"
   GIT_PROMPT_SYMBOLS_PREHASH=":"
-  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="L"
+  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="${Yellow}*${ResetColor}"
 }
 
 reload_git_prompt_colors "Jwl"
