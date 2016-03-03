@@ -3,13 +3,13 @@
 override_git_prompt_colors() {
   GIT_PROMPT_THEME_NAME="Jwl"
 
-  GIT_PROMPT_PREFIX=" ["
-  GIT_PROMPT_SUFFIX="]"
-  GIT_PROMPT_SEPARATOR=""
-  GIT_PROMPT_BRANCH="${Magenta}"
-  GIT_PROMPT_STAGED=" ${Red}staged-"
-  GIT_PROMPT_CONFLICTS=" ${Red}conflicts-"
-  GIT_PROMPT_CHANGED=" ${Blue}changed-"
+  GIT_PROMPT_PREFIX="\n├ "
+  GIT_PROMPT_SUFFIX=""
+  GIT_PROMPT_SEPARATOR=" ] "
+  GIT_PROMPT_BRANCH="[ ${Magenta}"
+  GIT_PROMPT_STAGED="${Red}staged-"
+  GIT_PROMPT_CONFLICTS="${Red}conflicts-"
+  GIT_PROMPT_CHANGED="${Blue}changed-"
   GIT_PROMPT_REMOTE=" "
   GIT_PROMPT_UNTRACKED=" ${Cyan}untracked-"
   GIT_PROMPT_STASHED=" ${Blue}stashed-"
@@ -17,17 +17,17 @@ override_git_prompt_colors() {
 
   GIT_PROMPT_COMMAND_OK="${Green}OK${ResetColor}"
   GIT_PROMPT_COMMAND_FAIL="${Red}FAIL-_LAST_COMMAND_STATE_${ResetColor}"
-  GIT_PROMPT_VIRTUALENV="${White}*${ResetColor} virtualenv: ${Blue}_VIRTUALENV_${ResetColor}\n"
+  GIT_PROMPT_VIRTUALENV="${White}*${ResetColor} virtualenv: ${Blue}_VIRTUALENV_${ResetColor} "
 
-  GIT_PROMPT_START_USER="${White}*${ResetColor} ${Cyan}\u@\h${ResetColor}: ${Yellow}${PathShort}${ResetColor}"
-  GIT_PROMPT_END_USER="\n${White}*${ResetColor} \D{%F %T} _LAST_COMMAND_INDICATOR_ $ "
+  GIT_PROMPT_START_USER="${White}┌${ResetColor} ${Cyan}\u@\h${ResetColor}: ${Yellow}${PathShort}${ResetColor}"
+  GIT_PROMPT_END_USER="\n${White}└${ResetColor} \D{%F %T} _LAST_COMMAND_INDICATOR_ $ "
 
   GIT_PROMPT_START_ROOT="${GIT_PROMPT_START_USER}"
   GIT_PROMPT_END_ROOT="${ResetColor}\n>[\D{%F %T}] # "
-  GIT_PROMPT_SYMBOLS_AHEAD="ahead:"
-  GIT_PROMPT_SYMBOLS_BEHIND="behind:"
+  GIT_PROMPT_SYMBOLS_AHEAD=" ${BrightBlack}⇑${ResetColor}"
+  GIT_PROMPT_SYMBOLS_BEHIND=" ${BrightBlack}⇓${ResetColor}"
   GIT_PROMPT_SYMBOLS_PREHASH=":"
-  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="L"
+  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="${Yellow}*${ResetColor}"
 }
 
 reload_git_prompt_colors "Jwl"
