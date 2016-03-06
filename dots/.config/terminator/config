@@ -5,14 +5,15 @@
 [profiles]
   [[default]]
     scrollbar_position = hidden
-    use_system_font = False
+    palette = "#999888:#e12266:#7eb907:#f58d11:#35a1ef:#9e6bf9:#06cbd5:#eae3a6:#abaa98:#ff5190:#a6e22e:#ffba3c:#7bb9ef:#cdb0ff:#23e8e8:#f4f4d9"
+    background_image = None
     background_darkness = 0.99
     scrollback_lines = 2000
     background_type = transparent
-    background_image = None
-    foreground_color = "#e3eced"
+    use_system_font = False
+    foreground_color = "#ebebeb"
     font = Source Code Pro Semi-Bold 10
-    background_color = "#002b36"
+    background_color = "#1d272a"
 [layouts]
   [[default]]
     [[[child1]]]
