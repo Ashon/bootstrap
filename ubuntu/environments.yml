@@ -1,0 +1,41 @@
+---
+- name: Install Development Environment
+  hosts: localhost
+  tasks:
+    - name: Install Packages
+      apt: name={{ item }} update_cache=yes
+      with_items:
+        - vim
+        - terminator
+
+    - name: Install VCS
+      apt: name={{ item }} update_cache=yes
+      with_items:
+        - git
+        - subversion
+
+    - name: Install System Inspection Tools
+      apt: name={{ item }}
+      with_items:
+        - nmap
+        - tcpdump
+        - iftop
+        - iotop
+        - htop
+        - valgrind
+        - httpie
+
+    - name: Install VM Tools
+      apt: name={{ item }}
+      with_items:
+        - vagrant
+        - virtualbox
+        - docker
+
+    - name: Add user `{{ user }}` to Docker Group
+      user:
+        name: "{{ user }}"
+        group: docker
+
+    - name: Start Docker Service
+      service: name=docker state=started

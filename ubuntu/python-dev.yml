@@ -1,0 +1,25 @@
+---
+- name: Install Python Development Environment
+  hosts: localhost
+  tasks:
+    - name: Install python-pip python-dev
+      apt: name={{ item }} update_cache=yes
+      with_items:
+        - python-dev
+        - python-pip
+        - virtualenv
+        - pylint
+
+    - name: Install Python Web Development Packages
+      pip: name={{ item }}
+      with_items:
+        - django
+        - flask
+
+    - name: Install Python Testing Tools
+      pip: name={{ item }}
+      with_items:
+        - pudb
+        - nose
+        - line_profiler
+        - memory_profiler

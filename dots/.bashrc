@@ -60,13 +60,6 @@ function get_ip_addr {
     echo $(ifconfig $NIC | grep 'inet addr' | awk '{print $2}' | cut -d : -f 2)
 }
 
-NIC=wlan0
-IPADDR=$(get_ip_addr wlan0)
-if [ "$IPADDR" == "" ]; then
-    NIC=eth0
-    IPADDR=$(get_ip_addr eth0)
-fi
-
 # simple git shell
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
