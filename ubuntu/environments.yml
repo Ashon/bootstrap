@@ -30,7 +30,7 @@
       with_items:
         - vagrant
         - virtualbox
-        - docker
+        - docker.io
 
     - name: Add user `{{ user }}` to Docker Group
       user:
