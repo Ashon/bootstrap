@@ -1,1 +1,1 @@
-cp -a .bashrc .gitconfig .vimrc .bash-git-prompt ~/
+cp -a .bashrc .gitconfig .vimrc .bash-git-prompt .config ~/
