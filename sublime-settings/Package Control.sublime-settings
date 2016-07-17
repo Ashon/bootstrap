@@ -1,0 +1,27 @@
+{
+    "bootstrapped": true,
+    "in_process_packages":
+    [
+    ],
+    "installed_packages":
+    [
+        "Emmet",
+        "Git",
+        "GitGutter",
+        "GoTools",
+        "Markdown Extended",
+        "Material Theme",
+        "Material Theme - White Panels",
+        "Package Control",
+        "Python Breakpoints",
+        "Python Improved",
+        "SideBarEnhancements",
+        "SublimeCodeIntel",
+        "SublimeLinter",
+        "SublimeLinter-pylint",
+        "SublimeREPL",
+        "Terminal",
+        "TrailingSpaces"
+    ]
+}
+
