@@ -138,3 +138,6 @@ GIT_PROMPT_THEME=Jwl
 GIT_PROMPT_LEADING_SPACE=0
 
 source ~/.bash-git-prompt/gitprompt.sh
+
+# export gopath
+export GOPATH=/usr/share/go
