@@ -9,6 +9,7 @@
         - python-pip
         - virtualenv
         - pylint
+        - flake8
 
     - name: Install Python Web Development Packages
       pip: name={{ item }}
