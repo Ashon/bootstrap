@@ -141,3 +141,10 @@ source ~/.bash-git-prompt/gitprompt.sh
 
 # export gopath
 export GOPATH=/usr/share/go
+
+# set dark theme for xterm emulators
+if [ "$TERM" == "xterm" ] ; then
+     xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id `xprop -root | awk '/^_NET_ACTIVE_WINDOW/ {print $5}'`
+fi
+
+
