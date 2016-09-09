@@ -1,0 +1,80 @@
+# By Jesse_Avalos , See me on Eye Candy Linux_  on Google +
+background yes
+use_xft yes
+xftfont Roboto:size=9
+xftalpha 1.0
+update_interval 0.2
+total_run_times 0
+own_window yes
+own_window_type dock
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+border_margin 5
+draw_graph_borders no
+
+default_color 000000
+default_shade_color 000000
+default_outline_color 000000
+minimum_size 160 120
+maximum_width 160
+gap_x 10
+gap_y 10
+alignment top_right
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+short_units yes
+text_buffer_size 2048
+use_spacer none
+override_utf8_locale yes
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont TheNautiGal:bold:size=10
+override_utf8_locale yes
+lua_load time.lua
+
+# Color scheme #
+default_margin 200
+default_color white
+color1 212021
+color2 white#E8E1E6
+color3 0074A3
+color4 1BD0F5
+
+own_window_argb_value 160
+own_window_argb_visual yes
+own_window_colour 000000
+own_window_transparent 100%
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+TEXT
+${font ADELE:size=20}$alignr$nodename
+${font ADELE:size=14}$color2$alignr$uptime ${color4}| Uptime
+
+# Cpu
+${color3}${cpugraph cpu0 144,}
+${color2}${alignr}${cpu cpu0} % ${color4}| Cpu${voffset 0}
+
+# Mem
+${color3}${memgraph 144,}
+${color2}${alignr}${memperc} % ${color4}| Mem${voffset 0}
+
+${color3}${diskiograph /dev/sda1 144,}
+${color2}${alignr}R $diskio_read ${color4}/${color2} W $diskio_write ${color4}| Disk${voffset 0}
+
+# Down
+${color3}${downspeedgraph enp3s0 144,}
+${color2}${alignr}${downspeedf enp3s0} KB/s ${color4}| Down${voffset 0}
+
+# Up
+${color3}${upspeedgraph enp3s0 144,}
+${color2}${alignr}${upspeedf enp3s0} KB/s ${color4}| Up${voffset 0}
