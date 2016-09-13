@@ -1,13 +1,20 @@
 [global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   handle_size = 1
   inactive_color_offset = 1.0
-  title_receive_bg_color = "#00c96e"
-  title_transmit_bg_color = "#0066c8"
+  suppress_multiple_term_dialog = True
+  title_font = Source Code Pro Semi-Bold 9
+  title_inactive_bg_color = "#444444"
+  title_inactive_fg_color = "#757575"
+  title_receive_bg_color = "#159b4e"
+  title_transmit_bg_color = "#056d87"
+  title_use_system_font = False
 [keybindings]
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
+      profile = default
       type = Terminal
     [[[window0]]]
       parent = ""
@@ -15,13 +22,14 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#313131"
-    background_darkness = 0.95
+    background_color = "#2e3234"
+    background_darkness = 0.92
     background_image = None
     background_type = transparent
-    font = Source Code Pro 12
-    foreground_color = "#fbfbfb"
-    palette = "#999888:#e12266:#009f08:#ff9600:#35a1ef:#9e6bf9:#06cbd5:#eae3a6:#abaa98:#ff5190:#22d500:#ffba3c:#7bb9ef:#cdb0ff:#23e8e8:#f4f4d9"
+    cursor_color = "#ff4e00"
+    font = Source Code Pro Semi-Bold 10
+    foreground_color = "#f1f1f1"
+    palette = "#70706c:#ff1d6e:#00e422:#ff9100:#3fd4ff:#9e6bf9:#00b996:#fff2c0:#999999:#ff5190:#34c700:#ec9a3b:#379df5:#cdb0ff:#17d0d0:#e8e8e8"
     scrollback_lines = 2000
     scrollbar_position = hidden
     use_system_font = False
