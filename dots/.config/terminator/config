@@ -4,10 +4,10 @@
   inactive_color_offset = 1.0
   suppress_multiple_term_dialog = True
   title_font = Source Code Pro Semi-Bold 9
-  title_inactive_bg_color = "#444444"
-  title_inactive_fg_color = "#757575"
+  title_inactive_bg_color = "#3f4757"
+  title_inactive_fg_color = "#a6a7a9"
   title_receive_bg_color = "#159b4e"
-  title_transmit_bg_color = "#056d87"
+  title_transmit_bg_color = "#3988de"
   title_use_system_font = False
 [keybindings]
 [layouts]
@@ -22,12 +22,12 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#2e3234"
-    background_darkness = 0.92
+    background_color = "#272b33"
+    background_darkness = 0.95
     background_image = None
     background_type = transparent
     cursor_color = "#ff4e00"
-    font = Source Code Pro Semi-Bold 10
+    font = Source Code Pro 10
     foreground_color = "#f1f1f1"
     palette = "#70706c:#ff1d6e:#00e422:#ff9100:#3fd4ff:#9e6bf9:#00b996:#fff2c0:#999999:#ff5190:#34c700:#ec9a3b:#379df5:#cdb0ff:#17d0d0:#e8e8e8"
     scrollback_lines = 2000
