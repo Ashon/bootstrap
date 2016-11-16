@@ -28,7 +28,7 @@ override_git_prompt_colors() {
   GIT_PROMPT_SYMBOLS_AHEAD=" ${DimWhite}ahead:${ResetColor}"
   GIT_PROMPT_SYMBOLS_BEHIND=" ${DimWhite}behind:${ResetColor}"
   GIT_PROMPT_SYMBOLS_PREHASH="detached:"
-  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="${Yellow}<no-track>${ResetColor}"
+  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="${Yellow}<no-remote>${ResetColor}"
 }
 
 reload_git_prompt_colors "Jwl"
