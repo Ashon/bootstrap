@@ -16,8 +16,7 @@
         - bower
         - http-server
         - node-inspector
-
-    - name: Install JS Testing Tools
-      npm: name={{ item }} global=yes
-      with_items:
+        - typescript
+        - jshint
         - jasmine
+
