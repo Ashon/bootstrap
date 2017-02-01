@@ -23,13 +23,13 @@
 [profiles]
   [[default]]
     background_color = "#272b33"
-    background_darkness = 0.95
+    background_darkness = 0.9
     background_image = None
     background_type = transparent
-    cursor_color = "#ff4e00"
+    cursor_color = "#ff6600"
     font = Source Code Pro 10
     foreground_color = "#f1f1f1"
-    palette = "#70706c:#ff1d6e:#00e422:#ff9100:#3fd4ff:#9e6bf9:#00b996:#fff2c0:#999999:#ff5190:#34c700:#ec9a3b:#379df5:#cdb0ff:#17d0d0:#e8e8e8"
+    palette = "#70706c:#ff1d6e:#00e422:#ff9100:#45a6c1:#9e6bf9:#00b996:#fff2c0:#999999:#ff5190:#34c700:#ec9a3b:#379df5:#cdb0ff:#17d0d0:#e8e8e8"
     scrollback_lines = 2000
     scrollbar_position = hidden
     use_system_font = False
