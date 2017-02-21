@@ -1,0 +1,11 @@
+autoconf
+bash-completion
+bash-git-prompt
+docker-machine
+openssl
+pkg-config
+pyenv
+pyenv-virtualenv
+pyenv-virtualenvwrapper
+readline
+vagrant-completion
