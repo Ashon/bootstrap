@@ -28,6 +28,7 @@ pyenv-virtualenv
 pyenv-virtualenvwrapper
 readline
 strongswan
+terminal-notifier
 terraform
 tree
 vagrant-completion
