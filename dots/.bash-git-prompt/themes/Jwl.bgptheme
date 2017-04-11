@@ -1,13 +1,13 @@
 #!/bin/bash
-# This is the default theme for gitprompt.sh
+
 override_git_prompt_colors() {
 
   GIT_PROMPT_THEME_NAME="Jwl"
 
-  GIT_PROMPT_PREFIX="\n${DimWhite}├${ResetColor} "
+  GIT_PROMPT_PREFIX="\n${DimWhite}▸ [${ResetColor}"
   GIT_PROMPT_SUFFIX=""
-  GIT_PROMPT_SEPARATOR=" ]"
-  GIT_PROMPT_BRANCH="[ ${Magenta}"
+  GIT_PROMPT_SEPARATOR=" ${DimWhite}]"
+  GIT_PROMPT_BRANCH=" ${Magenta}"
   GIT_PROMPT_STAGED=" ${Red}staged:"
   GIT_PROMPT_CONFLICTS=" ${Red}conflicts:"
   GIT_PROMPT_CHANGED=" ${Blue}changed:"
@@ -17,18 +17,18 @@ override_git_prompt_colors() {
   GIT_PROMPT_CLEAN=" ${Green}clean"
 
   GIT_PROMPT_COMMAND_OK="${Green}OK${ResetColor}"
-  GIT_PROMPT_COMMAND_FAIL="${Red}FAIL-_LAST_COMMAND_STATE_${ResetColor}"
-  GIT_PROMPT_VIRTUALENV="${DimWhite}*${ResetColor} [ ${Blue}_VIRTUALENV_${ResetColor} ]\n"
+  GIT_PROMPT_COMMAND_FAIL="${Red}ERR-_LAST_COMMAND_STATE_${ResetColor}"
+  GIT_PROMPT_VIRTUALENV="${DimWhite}▸ [ ${DimBlue}$(python --version | cut -d " " -f2) ${Blue}_VIRTUALENV_${DimWhite} ]${ResetColor}\n"
 
-  GIT_PROMPT_START_USER="${DimWhite}┌${ResetColor} ${Cyan}\u@\h${ResetColor}: ${Yellow}${PathShort}${ResetColor}"
-  GIT_PROMPT_END_USER="\n${DimWhite}└${ResetColor} \D{%F %T} _LAST_COMMAND_INDICATOR_ $ "
+  GIT_PROMPT_START_USER="${DimWhite}▸ ${DimCyan}\u@\h ${Yellow}${PathShort}${ResetColor}"
+  GIT_PROMPT_END_USER="\n${DimWhite}▸ \D{%T}${ResetColor} _LAST_COMMAND_INDICATOR_ $ "
 
   GIT_PROMPT_START_ROOT="${GIT_PROMPT_START_USER}"
   GIT_PROMPT_END_ROOT="${GIT_PROMPT_END_USER}"
-  GIT_PROMPT_SYMBOLS_AHEAD=" ${DimWhite}ahead:${ResetColor}"
-  GIT_PROMPT_SYMBOLS_BEHIND=" ${DimWhite}behind:${ResetColor}"
+  GIT_PROMPT_SYMBOLS_AHEAD=" ${DimWhite}ahead:"
+  GIT_PROMPT_SYMBOLS_BEHIND=" ${DimWhite}behind:"
   GIT_PROMPT_SYMBOLS_PREHASH="detached:"
-  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="${Yellow}<no-remote>${ResetColor}"
+  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="${Yellow}*${ResetColor}"
 }
 
 reload_git_prompt_colors "Jwl"
