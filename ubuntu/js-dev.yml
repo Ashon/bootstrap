@@ -19,4 +19,6 @@
         - typescript
         - jshint
         - jasmine
+        - webpack
+        - mocha
 
