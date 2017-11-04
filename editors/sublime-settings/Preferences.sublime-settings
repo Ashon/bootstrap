@@ -29,6 +29,8 @@
     "show_line_endings": true,
     "theme": "Boxy Ocean.sublime-theme",
     "theme_accent_cyan": true,
+    "theme_sidebar_folder_materialized": true,
+    "theme_sidebar_folder_mono": true,
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true
 }
