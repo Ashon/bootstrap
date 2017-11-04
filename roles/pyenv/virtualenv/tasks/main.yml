@@ -1,0 +1,5 @@
+---
+- name: get pyenv-virtualenv from git repository
+  git:
+    repo: "https://github.com/pyenv/pyenv-virtualenv.git"
+    dest: "{{ home_dir }}/.pyenv/plugins/pyenv-virtualenv"
