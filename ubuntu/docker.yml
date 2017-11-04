@@ -1,0 +1,16 @@
+---
+- name: Install docker-ce
+  hosts: localhost
+  become: yes
+  tasks:
+    - command: /usr/bin/env docker
+      register: docker_exists
+      ignore_errors: yes
+
+    - uri:
+        url: https://get.docker.com
+        dest: /tmp/get-docker.sh
+      when: docker_exists.rc != 0
+
+    - script: /tmp/get-docker.sh
+      when: docker_exists.rc != 0
