@@ -1,0 +1,30 @@
+---
+- name: Install python development packages
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Install default python packages
+      apt:
+        name: "{{ item }}"
+        update_cache: yes
+      with_items:
+        - python-dev
+        - python-pip
+
+    - name: Install Python build dependencies
+      apt:
+        name: "{{ item }}"
+        update_cache: yes
+      tags: build-deps
+      with_items:
+        - zlib1g-dev
+        - libbz2-dev
+        - libreadline-dev
+        - libssl-dev
+        - libsqlite3-dev
+
+- name: Install pyenv pyenv-virtualenv
+  hosts: localhost
+  roles:
+    - pyenv
+    - pyenv/virtualenv
