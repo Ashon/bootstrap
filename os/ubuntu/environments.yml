@@ -1,18 +1,19 @@
 ---
-- name: Install Development Environment
+- name: Install Apt packages
   hosts: localhost
+  become: yes
   tasks:
-    - name: Install Packages
-      apt: name={{ item }} update_cache=yes
+    - apt: name={{ item }} update_cache=yes
       with_items:
         - vim
-        - terminix
+        - tilix
+      tags: utilities
 
-    - name: Install VCS
-      apt: name={{ item }} update_cache=yes
+    - apt: name={{ item }} update_cache=yes
       with_items:
         - git
         - subversion
+      tags: vcs
 
     - name: Install System Inspection Tools
       apt: name={{ item }}
@@ -24,18 +25,19 @@
         - htop
         - valgrind
         - httpie
+      tags: inspection
 
     - name: Install VM Tools
       apt: name={{ item }}
       with_items:
         - vagrant
         - virtualbox
-        - docker.io
+      tags: vm
 
-    - name: Add user `{{ user }}` to Docker Group
-      user:
-        name: "{{ user }}"
-        group: docker
-
-    - name: Start Docker Service
-      service: name=docker state=started
+- name: Setup environment
+  hosts: localhost
+  roles:
+    - dots
+    - autoenv
+    - bash-git-prompt
+  tags: env
