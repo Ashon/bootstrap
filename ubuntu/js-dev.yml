@@ -1,0 +1,23 @@
+---
+- name: Install Node.js Development Environment
+  hosts: localhost
+  tasks:
+    - name: Install NodeJS and NPM
+      apt: name={{ item }} update_cache=yes
+      with_items:
+        - nodejs-legacy
+        - npm
+
+    - name: Install Node.js Tools
+      npm: name={{ item }} global=yes
+      with_items:
+        - grunt
+        - gulp
+        - bower
+        - http-server
+        - node-inspector
+        - typescript
+        - jshint
+        - jasmine
+        - webpack
+        - mocha

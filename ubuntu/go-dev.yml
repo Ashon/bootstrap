@@ -1,0 +1,10 @@
+---
+- name: Install Golang Development Environment
+  hosts: localhost
+  tasks:
+    - name: Install Packages
+      apt: name={{ item }} update_cache=yes
+      with_items:
+        - golang
+        - golang-golang-x-tools
+

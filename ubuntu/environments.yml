@@ -41,3 +41,5 @@
     - autoenv
     - bash-git-prompt
   tags: env
+  vars_files:
+    - ../config.yml

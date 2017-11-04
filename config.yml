@@ -1,0 +1,4 @@
+bash_aliases:
+  l: ls -l
+  dckco: docker-compose
+  tf: terraform

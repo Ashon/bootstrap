@@ -7,3 +7,11 @@
     - gitconfig
     - vimrc
   tags: configuration
+
+- name: setup bash aliases
+  blockinfile:
+    path: "{{ home_dir }}/.bashrc"
+    marker: "# {mark} ANSIBLE ROLE: BASH_ALIASES: {{ item.key }}"
+    block: alias {{ item.key }}="{{ item.value }}"
+  with_dict: "{{ bash_aliases }}"
+  tags: bash_aliases
