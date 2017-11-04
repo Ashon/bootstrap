@@ -1,0 +1,10 @@
+---
+- name: setup sublime-text settings
+  hosts: localhost
+  tasks:
+    - copy:
+        src: ../editors/sublime-settings/{{ item }}
+        dest: "{{ home_dir }}/.config/sublime-text-3/Packages/User/{{ item }}"
+      with_items:
+        - Preferences.sublime-settings
+        - Package Control.sublime-settings
