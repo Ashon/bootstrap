@@ -8,3 +8,4 @@
       with_items:
         - Preferences.sublime-settings
         - Package Control.sublime-settings
+        - Terminal.sublime-settings
