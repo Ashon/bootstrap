@@ -7,13 +7,13 @@
       with_items:
         - vim
         - tilix
-      tags: utilities
+      tags: apt, utilities
 
     - apt: name={{ item }} update_cache=yes
       with_items:
         - git
         - subversion
-      tags: vcs
+      tags: apt, vcs
 
     - name: Install System Inspection Tools
       apt: name={{ item }}
@@ -25,14 +25,14 @@
         - htop
         - valgrind
         - httpie
-      tags: inspection
+      tags: apt, inspection
 
     - name: Install VM Tools
       apt: name={{ item }}
       with_items:
         - vagrant
         - virtualbox
-      tags: vm
+      tags: apt, vm
 
 - name: Setup environment
   hosts: localhost
