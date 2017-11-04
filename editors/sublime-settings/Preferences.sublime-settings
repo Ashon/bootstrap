@@ -8,6 +8,7 @@
     "color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
     "draw_minimap_border": true,
     "draw_white_space": "all",
+    "ensure_newline_at_eof_on_save": true,
     "fade_fold_buttons": false,
     "font_face": "ubuntu mono",
     "font_size": 15,
@@ -28,5 +29,6 @@
     "show_line_endings": true,
     "theme": "Boxy Ocean.sublime-theme",
     "theme_accent_cyan": true,
-    "translate_tabs_to_spaces": true
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
 }
