@@ -18,3 +18,4 @@
       GIT_PROMPT_THEME=Jwl
       GIT_PROMPT_LEADING_SPACE=0
       source ~/.bash-git-prompt/gitprompt.sh
+  tags: configuration
