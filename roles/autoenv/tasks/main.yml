@@ -1,0 +1,11 @@
+- name: get autoenv from git repository
+  git:
+    repo: git://github.com/kennethreitz/autoenv.git
+    dest: "{{ home_dir }}/.autoenv"
+
+- name: ensure .bashrc has autoenv activate routine
+  blockinfile:
+    path: "{{ home_dir }}/.bashrc"
+    marker: "# {mark} ANSIBLE ROLE: AUTOENV"
+    block: |
+      source ~/.autoenv/activate.sh

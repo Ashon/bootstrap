@@ -7,6 +7,7 @@
 - name: ensure .bashrc has pyenv activate routine
   blockinfile:
     path: "{{ home_dir }}/.bashrc"
+    marker: "# {mark} ANSIBLE ROLE: PYENV"
     block: |
       export PYENV_ROOT="$HOME/.pyenv"
       export PATH="$PYENV_ROOT/bin:$PATH"

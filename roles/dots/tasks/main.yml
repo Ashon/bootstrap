@@ -1,0 +1,8 @@
+---
+- name: copy dot files
+  copy:
+    src: "{{ item }}"
+    dest: "{{ home_dir }}/.{{ item }}"
+  with_items:
+    - gitconfig
+    - vimrc
