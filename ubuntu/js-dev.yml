@@ -5,7 +5,7 @@
     - name: Install NodeJS and NPM
       apt: name={{ item }} update_cache=yes
       with_items:
-        - nodejs-legacy
+        - nodejs
         - npm
 
     - name: Install Node.js Tools
