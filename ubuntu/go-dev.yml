@@ -1,6 +1,7 @@
 ---
 - name: Install Golang Development Environment
   hosts: localhost
+  become: yes
   tasks:
     - name: Install Packages
       apt: name={{ item }} update_cache=yes
