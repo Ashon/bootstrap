@@ -5,6 +5,7 @@
   tasks:
     - apt: name={{ item }} update_cache=yes
       with_items:
+        - dconf-editor
         - vim
         - tilix
       tags: apt, utilities
