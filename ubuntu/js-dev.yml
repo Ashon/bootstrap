@@ -1,6 +1,7 @@
 ---
 - name: Install Node.js Development Environment
   hosts: localhost
+  become: yes
   tasks:
     - name: Install NodeJS and NPM
       apt: name={{ item }} update_cache=yes
@@ -21,3 +22,4 @@
         - jasmine
         - webpack
         - mocha
+        - create-react-app

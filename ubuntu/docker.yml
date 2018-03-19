@@ -14,7 +14,7 @@
 
     - script: /tmp/get-docker.sh
       when: docker_exists.rc != 0
-    
+
     - group:
         name: docker
         state: present
