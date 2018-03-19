@@ -10,7 +10,7 @@
     "draw_white_space": "all",
     "ensure_newline_at_eof_on_save": true,
     "fade_fold_buttons": false,
-    "font_face": "ubuntu mono",
+    "font_face": "source code pro",
     "font_size": 15,
     "highlight_line": true,
     "ignored_packages":
