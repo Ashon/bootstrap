@@ -1,0 +1,29 @@
+---
+- name: Install fcitx-korean
+  hosts: localhost
+  become: yes
+  tasks:
+    - apt:
+        name: fcitx-hangul
+        update_cache: yes
+
+    - blockinfile:
+        block: |
+          GTK_IM_MODULE=fcitx
+          QT_IM_MODULE=fcitx
+          XMODIFIERS=@im=fcitx
+        path: /etc/profile
+
+- name: Set Fcitx
+  hosts: localhost
+  tasks:
+    - name: set ime to use fcitx
+      command: im-config -n fcitx
+
+    - name: config fcitx - change trigger key
+      copy:
+        src: "fcitx/{{ item }}"
+        dest: "~/.config/fcitx/{{ item }}"
+      with_items:
+        - config
+        - profile
