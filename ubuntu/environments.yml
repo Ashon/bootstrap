@@ -26,6 +26,8 @@
         - htop
         - valgrind
         - httpie
+        - net-tools
+        - jq
       tags: apt, inspection
 
     - name: Install VM Tools
