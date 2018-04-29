@@ -2,3 +2,6 @@ bash_aliases:
   l: ls -l
   dckco: docker-compose
   tf: terraform
+  os: openstack
+  tfenv: env | grep TF_
+  osenv: env | grep OS_
