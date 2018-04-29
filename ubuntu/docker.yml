@@ -6,6 +6,7 @@
     - command: /usr/bin/env docker
       register: docker_exists
       ignore_errors: yes
+      changed_when: false
 
     - uri:
         url: https://get.docker.com

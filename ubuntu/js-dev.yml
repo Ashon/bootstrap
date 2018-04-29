@@ -16,7 +16,6 @@
         - gulp
         - bower
         - http-server
-        - node-inspector
         - typescript
         - jshint
         - jasmine
