@@ -7,7 +7,9 @@
       with_items:
         - dconf-editor
         - vim
-        - tilix
+        - terminator
+        - curl
+        - jq
       tags: apt, utilities
 
     - apt: name={{ item }} update_cache=yes
@@ -27,7 +29,6 @@
         - valgrind
         - httpie
         - net-tools
-        - jq
       tags: apt, inspection
 
     - name: Install VM Tools
