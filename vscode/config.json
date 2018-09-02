@@ -1,0 +1,55 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "Source Code Pro",
+    "editor.fontSize": 16,
+    "editor.cursorBlinking": "phase",
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 4,
+    "editor.rulers":[
+        0, 80, 81, 100
+    ],
+    "files.trimTrailingWhitespace": true,
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[ruby]": {
+        "editor.tabSize": 2
+    },
+    "python.linting.flake8Enabled": true,
+    "window.zoomLevel": 0,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations" : {
+        "terminal.foreground" : "#d3d7cf",
+        "terminal.background" : "#181a1a",
+        "terminal.ansiBlack": "#70706c",
+        "terminal.ansiBlue": "#0095ff",
+        "terminal.ansiBrightBlack": "#999999",
+        "terminal.ansiBrightBlue": "#54b7ff",
+        "terminal.ansiBrightCyan": "#3ffdff",
+        "terminal.ansiBrightGreen": "#34c700",
+        "terminal.ansiBrightMagenta": "#cdb0ff",
+        "terminal.ansiBrightRed": "#ff5171",
+        "terminal.ansiBrightWhite": "#e8e8e8",
+        "terminal.ansiBrightYellow": "#ec9a3b",
+        "terminal.ansiCyan": "#00c5c3",
+        "terminal.ansiGreen": "#00e422",
+        "terminal.ansiMagenta": "#9e6bf9",
+        "terminal.ansiRed": "#ff004c",
+        "terminal.ansiWhite": "#ffffff",
+        "terminal.ansiYellow": "#ff9100"
+    }
+}
