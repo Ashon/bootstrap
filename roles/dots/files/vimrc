@@ -1,2 +1,11 @@
 syn enable
-set nu et sw=4 ts=4 ci si
+set nu et sw=4 ts=4
+set cc=80,100
+
+set listchars=tab:└─,trail:·,space:·,extends:>,precedes:<
+set list
+
+highlight NonText ctermfg=darkgrey guifg=darkgrey
+highlight SpecialKey ctermfg=darkgrey guifg=darkgrey
+highlight ColorColumn ctermbg=black guibg=black guifg=black
+highlight LineNr term=bold ctermfg=darkgrey ctermbg=black guifg=darkgrey
