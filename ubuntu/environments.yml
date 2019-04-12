@@ -3,23 +3,25 @@
   hosts: localhost
   become: yes
   tasks:
-    - apt: name={{ item }} update_cache=yes
+    - apt:
+        name: "{{ item }}"
       with_items:
-        - dconf-editor
         - vim
         - terminator
         - curl
         - jq
       tags: apt, utilities
 
-    - apt: name={{ item }} update_cache=yes
+    - apt:
+        name: "{{ item }}"
       with_items:
         - git
         - subversion
       tags: apt, vcs
 
     - name: Install System Inspection Tools
-      apt: name={{ item }}
+      apt:
+        name: "{{ item }}"
       with_items:
         - nmap
         - tcpdump
@@ -32,7 +34,8 @@
       tags: apt, inspection
 
     - name: Install VM Tools
-      apt: name={{ item }}
+      apt:
+        name: "{{ item }}"
       with_items:
         - vagrant
         - virtualbox
@@ -47,3 +50,13 @@
   tags: env
   vars_files:
     - ../config.yml
+  tasks:
+    - blockinfile:
+        path: "{{ home_dir }}/.bashrc"
+        marker: "# {mark} ANSIBLE ROLE: KDE BLUR"
+        insertbefore: "^# ~/.bashrc"
+        block: |
+          if [[ $(ps --no-header -p $PPID -o comm) =~ terminator ]]; then
+              for wid in $(xdotool search --pid $PPID); do
+                  xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
+          fi

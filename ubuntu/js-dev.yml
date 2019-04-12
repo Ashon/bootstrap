@@ -4,17 +4,17 @@
   become: yes
   tasks:
     - name: Install NodeJS and NPM
-      apt: name={{ item }} update_cache=yes
+      apt:
+        name: "{{ item }}"
       with_items:
         - nodejs
         - npm
 
     - name: Install Node.js Tools
-      npm: name={{ item }} global=yes
+      npm:
+        name: "{{ item }}"
+        global: yes
       with_items:
-        - grunt
-        - gulp
-        - bower
         - http-server
         - typescript
         - jshint

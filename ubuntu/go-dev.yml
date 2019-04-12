@@ -4,7 +4,8 @@
   become: yes
   tasks:
     - name: Install Packages
-      apt: name={{ item }} update_cache=yes
+      apt:
+        name: "{{ item }}"
       with_items:
         - golang
         - golang-golang-x-tools

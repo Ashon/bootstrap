@@ -5,7 +5,6 @@
   tasks:
     - apt:
         name: fcitx-hangul
-        update_cache: yes
 
     - blockinfile:
         block: |
@@ -20,7 +19,12 @@
     - name: set ime to use fcitx
       command: im-config -n fcitx
 
-    - name: config fcitx - change trigger key
+    - name: create fcitx directory
+      file:
+        path: ~/.config/fcitx
+        state: directory
+
+    - name: config fcitx - change trigger
       copy:
         src: "fcitx/{{ item }}"
         dest: "~/.config/fcitx/{{ item }}"
