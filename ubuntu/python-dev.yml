@@ -20,6 +20,7 @@
         - libreadline-dev
         - libssl-dev
         - libsqlite3-dev
+        - libffi-dev
 
 - name: Install pyenv pyenv-virtualenv
   hosts: localhost
