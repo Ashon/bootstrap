@@ -26,6 +26,7 @@
     "[ruby]": {
         "editor.tabSize": 2
     },
+    "python.pythonPath": "~/.pyenv/shims/python",
     "python.linting.flake8Enabled": true,
     "window.zoomLevel": 0,
     "liveServer.settings.donotShowInfoMsg": true,
@@ -35,21 +36,21 @@
     "workbench.colorCustomizations" : {
         "terminal.foreground" : "#d3d7cf",
         "terminal.background" : "#181a1a",
-        "terminal.ansiBlack": "#70706c",
+        "terminal.ansiBlack": "#222",
+        "terminal.ansiBrightBlack": "#222",
         "terminal.ansiBlue": "#0095ff",
-        "terminal.ansiBrightBlack": "#999999",
         "terminal.ansiBrightBlue": "#54b7ff",
-        "terminal.ansiBrightCyan": "#3ffdff",
-        "terminal.ansiBrightGreen": "#34c700",
-        "terminal.ansiBrightMagenta": "#cdb0ff",
-        "terminal.ansiBrightRed": "#ff5171",
-        "terminal.ansiBrightWhite": "#e8e8e8",
-        "terminal.ansiBrightYellow": "#ec9a3b",
         "terminal.ansiCyan": "#00c5c3",
+        "terminal.ansiBrightCyan": "#3ffdff",
         "terminal.ansiGreen": "#00e422",
+        "terminal.ansiBrightGreen": "#34c700",
         "terminal.ansiMagenta": "#9e6bf9",
+        "terminal.ansiBrightMagenta": "#cdb0ff",
         "terminal.ansiRed": "#ff004c",
-        "terminal.ansiWhite": "#ffffff",
-        "terminal.ansiYellow": "#ff9100"
+        "terminal.ansiBrightRed": "#ff5171",
+        "terminal.ansiWhite": "#aaa",
+        "terminal.ansiBrightWhite": "#fff",
+        "terminal.ansiYellow": "#ff9100",
+        "terminal.ansiBrightYellow": "#ec9a3b"
     }
 }
