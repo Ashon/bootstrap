@@ -3,27 +3,29 @@
   hosts: localhost
   become: yes
   tasks:
-    - name: Install default python packages
-      apt:
-        name: "{{ item }}"
-      with_items:
-        - python-dev
-        - python-pip
-
-    - name: Install Python build dependencies
-      apt:
-        name: "{{ item }}"
-      tags: build-deps
-      with_items:
-        - zlib1g-dev
-        - libbz2-dev
-        - libreadline-dev
-        - libssl-dev
-        - libsqlite3-dev
-        - libffi-dev
+  - name: Install Python build dependencies
+    tags: build-deps
+    apt:
+      name:
+      - python-dev
+      - python-pip
+      - zlib1g-dev
+      - libbz2-dev
+      - libreadline-dev
+      - libssl-dev
+      - libsqlite3-dev
+      - libffi-dev
+      - build-essential
+      - llvm
+      - libncurses5-dev
+      - libncursesw5-dev
+      - xz-utils
+      - tk-dev
+      - liblzma-dev
+      - python-openssl
 
 - name: Install pyenv pyenv-virtualenv
   hosts: localhost
   roles:
-    - pyenv
-    - pyenv/virtualenv
+  - pyenv
+  - pyenv/virtualenv
