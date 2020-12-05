@@ -4,8 +4,7 @@
   become: yes
   tasks:
     - apt:
-        name: "{{ item }}"
-      with_items:
+        name:
         - vim
         - terminator
         - curl
@@ -13,16 +12,14 @@
       tags: apt, utilities
 
     - apt:
-        name: "{{ item }}"
-      with_items:
+        name:
         - git
         - subversion
       tags: apt, vcs
 
     - name: Install System Inspection Tools
       apt:
-        name: "{{ item }}"
-      with_items:
+        name:
         - nmap
         - tcpdump
         - iftop
@@ -35,21 +32,25 @@
 
     - name: Install VM Tools
       apt:
-        name: "{{ item }}"
-      with_items:
+        name:
         - vagrant
-        - virtualbox
+        - qemu
+        - qemu-kvm
+        - libvirt-daemon
+        - libvirt-clients
+        - bridge-utils
+        - virt-manager
       tags: apt, vm
 
 - name: Setup environment
   hosts: localhost
   roles:
-    - dots
-    - autoenv
-    - bash-git-prompt
+  - dots
+  - autoenv
+  - bash-git-prompt
   tags: env
   vars_files:
-    - ../config.yml
+  - ../config.yml
   tasks:
     - blockinfile:
         path: "{{ home_dir }}/.bashrc"
